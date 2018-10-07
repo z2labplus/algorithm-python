@@ -1,1 +1,2 @@
-"# algorithm-python" 
+# algorithm-python
+__author__ = "HerryZhang"
