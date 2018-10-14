@@ -1,5 +1,7 @@
 '''
 python3.6.4
+__date__ = "2018-10-14"
+__author__="HerryZhang"
 '''
 
 
