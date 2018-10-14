@@ -1,7 +1,8 @@
 '''
 python3.6.4
-__date__ = "2018-10-14"
-__author__="HerryZhang"
+@Date      : "2018-10-14"
+@Author    :"HerryZhang"
+#Reference :https://time.geekbang.org/column/article/41440
 '''
 
 
