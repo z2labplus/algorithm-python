@@ -1,4 +1,5 @@
 .vagrant
+.vscode
 .next
 *.log
 node_modules
