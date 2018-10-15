@@ -28,12 +28,13 @@ def insertion_sort(raw_list):
     '''
     插入排序
     '''
+    
     list_len = len(raw_list)
     if list_len <= 1:
         return
     for i in range(1, list_len):
-        value = raw_list[i]# 1
-        j = i - 1# 0
+        value = raw_list[i]  # 1
+        j = i - 1  # 0
         for j in range(j + 1)[::-1]:
             if raw_list[j] > value:
                 raw_list[j + 1] = raw_list[j]
