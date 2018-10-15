@@ -56,7 +56,7 @@ class ADTTree(ABC):
         pass
 
     @abstractmethod
-    def insert_child(self,p,i,c):
+    def insert_child(self, p, i, c):
         pass
 
     @abstractmethod
