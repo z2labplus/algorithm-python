@@ -59,6 +59,9 @@ def selection_sort(raw_list):
 
 
 def merge_sort(raw_list):
+    '''
+    归并排序
+    '''
     if len(raw_list) <= 1:
         return raw_list
     mid = len(raw_list) // 2
@@ -84,6 +87,9 @@ def merge(left, right):
 
 
 def quick_sort(arrs):
+    '''
+    快速排序
+    '''
     if len(arrs) <= 1:
         return arrs
     left = []
