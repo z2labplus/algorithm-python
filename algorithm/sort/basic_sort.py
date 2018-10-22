@@ -107,7 +107,15 @@ def bucket_sort(arrs):
     '''
     桶排序
     '''
-    pass
+    maxs = max(arrs)
+    result = [0 for i in range(maxs + 1)]
+    res = []
+    for i in arrs:
+        result[i] = result[i] + 1
+    for i in range(maxs + 1):
+        for j in range(result[i]):
+            res.append(i)
+    return res
 
 
 def counting_sort(arrs):
@@ -133,3 +141,8 @@ def radix_sort(arrs):
     基数排序
     '''
     pass
+
+
+if __name__ == '__main__':
+    arrs = [2, 5, 3, 6, 2, 3, 6, 3]
+    print(bucket_sort(arrs))
