@@ -101,3 +101,35 @@ def quick_sort(arrs):
         else:
             left.append(num)
     return quick_sort(left) + [pivot] + quick_sort(right)
+
+
+def bucket_sort(arrs):
+    '''
+    桶排序
+    '''
+    pass
+
+
+def counting_sort(arrs):
+    '''
+    计数排序
+    '''
+    maxs = max(arrs)
+    c = [0 for i in range(maxs + 1)]
+    for i in arrs:
+        c[i] = c[i] + 1
+    for i in range(1, maxs + 1):
+        c[i] = c[i - 1] + c[i]
+
+    res = [0 for i in range(len(arrs))]
+    for i in arrs[::-1]:
+        res[c[i] - 1] = i
+        c[i] = c[i] - 1
+    return res
+
+
+def radix_sort(arrs):
+    '''
+    基数排序
+    '''
+    pass
