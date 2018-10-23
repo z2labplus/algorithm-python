@@ -156,8 +156,3 @@ def radix_sort(arrs):
         tmp = [[] for i in range(10)]
         n = 10 * n
     return res
-
-
-if __name__ == '__main__':
-    arrs = [59, 95, 7, 34, 60, 168, 171, 259, 372, 45, 88, 133]
-    print(radix_sort(arrs))

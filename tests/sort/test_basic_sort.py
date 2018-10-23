@@ -5,6 +5,8 @@ from algorithm.sort.basic_sort import (
     merge_sort,
     quick_sort,
     counting_sort,
+    bucket_sort,
+    radix_sort,
 )
 
 
@@ -17,3 +19,5 @@ def test_sort():
     assert merge_sort(raw_list) == expect_list
     assert quick_sort(raw_list) == expect_list
     assert counting_sort(raw_list) == expect_list
+    assert bucket_sort(raw_list) == expect_list
+    assert radix_sort(raw_list) == expect_list
