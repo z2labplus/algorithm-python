@@ -139,10 +139,25 @@ def counting_sort(arrs):
 def radix_sort(arrs):
     '''
     基数排序
+    Least Signficant Digit First(LSD)
     '''
-    pass
+    size = len(str(max(arrs)))
+    tmp = [[] for i in range(10)]
+    n = 1
+    for i in range(size):
+        res = []
+        for single in arrs:
+            m = single // n % 10
+            tmp[m].append(single)
+        for i in range(10):
+            for s in tmp[i]:
+                res.append(s)
+        arrs = res
+        tmp = [[] for i in range(10)]
+        n = 10 * n
+    return res
 
 
 if __name__ == '__main__':
-    arrs = [2, 5, 3, 6, 2, 3, 6, 3]
-    print(bucket_sort(arrs))
+    arrs = [59, 95, 7, 34, 60, 168, 171, 259, 372, 45, 88, 133]
+    print(radix_sort(arrs))
