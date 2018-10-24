@@ -1,7 +1,7 @@
 # algorithm-python
 
 ```bash
-__author__ = "HerryZhang"
+__author__ = "Herry2Zhang"
 __coauthor__ = "Micheal Gardner"
 ```
 
