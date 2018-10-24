@@ -59,9 +59,9 @@ def selection_sort(raw_list):
 
 
 def merge_sort(raw_list):
-    '''
+    """
     归并排序
-    '''
+    """
     if len(raw_list) <= 1:
         return raw_list
     mid = len(raw_list) // 2
@@ -87,9 +87,9 @@ def merge(left, right):
 
 
 def quick_sort(arrs):
-    '''
+    """
     快速排序
-    '''
+    """
     if len(arrs) <= 1:
         return arrs
     left = []
@@ -104,9 +104,9 @@ def quick_sort(arrs):
 
 
 def bucket_sort(arrs):
-    '''
+    """
     桶排序
-    '''
+    """
     maxs = max(arrs)
     result = [0 for i in range(maxs + 1)]
     res = []
@@ -119,9 +119,9 @@ def bucket_sort(arrs):
 
 
 def counting_sort(arrs):
-    '''
+    """
     计数排序
-    '''
+    """
     maxs = max(arrs)
     c = [0 for i in range(maxs + 1)]
     for i in arrs:
@@ -137,10 +137,10 @@ def counting_sort(arrs):
 
 
 def radix_sort(arrs):
-    '''
+    """
     基数排序
     Least Signficant Digit First(LSD)
-    '''
+    """
     size = len(str(max(arrs)))
     tmp = [[] for i in range(10)]
     n = 1
