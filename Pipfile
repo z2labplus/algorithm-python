@@ -14,9 +14,9 @@ coverage = "*"
 mypy = "*"
 pytest = "*"
 pytest-cov = "*"
-pytest-django = "*"
 pytest-html = "*"
 pytest-sugar = "*"
+pytest-rerunfailures = "*"
 
 [requires]
 python_version = "3.7"

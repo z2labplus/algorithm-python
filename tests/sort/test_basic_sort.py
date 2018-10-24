@@ -10,14 +10,33 @@ from algorithm.sort.basic_sort import (
 )
 
 
-def test_sort():
-    expect_list = [1, 2, 3, 4, 5, 6]
-    raw_list = [4, 5, 6, 3, 2, 1]
-    assert bubble_sort(raw_list) == expect_list
-    assert insertion_sort(raw_list) == expect_list
-    assert selection_sort(raw_list) == expect_list
-    assert merge_sort(raw_list) == expect_list
-    assert quick_sort(raw_list) == expect_list
-    assert counting_sort(raw_list) == expect_list
-    assert bucket_sort(raw_list) == expect_list
-    assert radix_sort(raw_list) == expect_list
+def test_bubble_sort(items_to_be_sorted, items_expected_sorted):
+    assert bubble_sort(items_to_be_sorted) == items_expected_sorted
+
+
+def test_insertion_sort(items_to_be_sorted, items_expected_sorted):
+    assert insertion_sort(items_to_be_sorted) == items_expected_sorted
+
+
+def test_selection_sort(items_to_be_sorted, items_expected_sorted):
+    assert selection_sort(items_to_be_sorted) == items_expected_sorted
+
+
+def test_merge_sort(items_to_be_sorted, items_expected_sorted):
+    assert merge_sort(items_to_be_sorted) == items_expected_sorted
+
+
+def test_quick_sort(items_to_be_sorted, items_expected_sorted):
+    assert quick_sort(items_to_be_sorted) == items_expected_sorted
+
+
+def test_radix_sort(items_to_be_sorted, items_expected_sorted):
+    assert radix_sort(items_to_be_sorted) == items_expected_sorted
+
+
+def test_counting_sort(items_to_be_sorted, items_expected_sorted):
+    assert counting_sort(items_to_be_sorted) == items_expected_sorted
+
+
+def test_bucket_sort(items_to_be_sorted, items_expected_sorted):
+    assert bucket_sort(items_to_be_sorted) == items_expected_sorted
