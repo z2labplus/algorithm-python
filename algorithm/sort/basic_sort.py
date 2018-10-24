@@ -59,6 +59,9 @@ def selection_sort(raw_list):
 
 
 def merge_sort(raw_list):
+    '''
+    归并排序
+    '''
     if len(raw_list) <= 1:
         return raw_list
     mid = len(raw_list) // 2
@@ -84,6 +87,9 @@ def merge(left, right):
 
 
 def quick_sort(arrs):
+    '''
+    快速排序
+    '''
     if len(arrs) <= 1:
         return arrs
     left = []
@@ -95,3 +101,58 @@ def quick_sort(arrs):
         else:
             left.append(num)
     return quick_sort(left) + [pivot] + quick_sort(right)
+
+
+def bucket_sort(arrs):
+    '''
+    桶排序
+    '''
+    maxs = max(arrs)
+    result = [0 for i in range(maxs + 1)]
+    res = []
+    for i in arrs:
+        result[i] = result[i] + 1
+    for i in range(maxs + 1):
+        for j in range(result[i]):
+            res.append(i)
+    return res
+
+
+def counting_sort(arrs):
+    '''
+    计数排序
+    '''
+    maxs = max(arrs)
+    c = [0 for i in range(maxs + 1)]
+    for i in arrs:
+        c[i] = c[i] + 1
+    for i in range(1, maxs + 1):
+        c[i] = c[i - 1] + c[i]
+
+    res = [0 for i in range(len(arrs))]
+    for i in arrs[::-1]:
+        res[c[i] - 1] = i
+        c[i] = c[i] - 1
+    return res
+
+
+def radix_sort(arrs):
+    '''
+    基数排序
+    Least Signficant Digit First(LSD)
+    '''
+    size = len(str(max(arrs)))
+    tmp = [[] for i in range(10)]
+    n = 1
+    for i in range(size):
+        res = []
+        for single in arrs:
+            m = single // n % 10
+            tmp[m].append(single)
+        for i in range(10):
+            for s in tmp[i]:
+                res.append(s)
+        arrs = res
+        tmp = [[] for i in range(10)]
+        n = 10 * n
+    return res
