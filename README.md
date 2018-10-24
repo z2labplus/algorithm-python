@@ -1,7 +1,7 @@
 # algorithm-python
 
 ```bash
-__author__ = "Herry2Zhang"
+__author__ = "HerryZhang"
 __coauthor__ = "Micheal Gardner"
 ```
 
@@ -14,4 +14,14 @@ cd this-repo-dir/
 pipenv install 
 pipenv shell
 pytest
+```
+
+##Git
+```
+git fetch origin
+git rebase origin/master
+git checkout -b algo-ch16
+git diff
+git add -A
+git commit -am "modify readme"
 ```
