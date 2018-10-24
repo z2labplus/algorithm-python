@@ -25,9 +25,20 @@ def bin_serach_inner(arrs, low, high, value):
 
 
 def sqrt(x):
-    pass
+    '''
+    求平方根，精确到小数点后6位
+    '''
+    low = 0
+    mid = x / 2
+    high = x
+    while abs(mid ** 2 - x) > 0.000001:
+        if mid ** 2 < x:
+            low = mid
+        else:
+            high = mid
+        mid = (low + high) / 2
+    return mid
 
 
 if __name__ == '__main__':
-    arrs = [8, 11, 19, 23, 27, 33, 45, 55, 67, 98]
-    print(bin_search(arrs, 11))
+    print(sqrt(11))
