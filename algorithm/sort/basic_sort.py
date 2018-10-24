@@ -86,16 +86,16 @@ def merge(left, right):
     return res
 
 
-def quick_sort(arrs):
+def quick_sort(items):
     """
     快速排序
     """
-    if len(arrs) <= 1:
-        return arrs
+    if len(items) <= 1:
+        return items
     left = []
     right = []
-    pivot = arrs.pop()
-    for num in arrs:
+    pivot = items.pop()
+    for num in items:
         if num > pivot:
             right.append(num)
         else:
@@ -103,14 +103,14 @@ def quick_sort(arrs):
     return quick_sort(left) + [pivot] + quick_sort(right)
 
 
-def bucket_sort(arrs):
+def bucket_sort(items):
     """
     桶排序
     """
-    maxs = max(arrs)
+    maxs = max(items)
     result = [0 for i in range(maxs + 1)]
     res = []
-    for i in arrs:
+    for i in items:
         result[i] = result[i] + 1
     for i in range(maxs + 1):
         for j in range(result[i]):
@@ -118,41 +118,41 @@ def bucket_sort(arrs):
     return res
 
 
-def counting_sort(arrs):
+def counting_sort(items):
     """
     计数排序
     """
-    maxs = max(arrs)
+    maxs = max(items)
     c = [0 for i in range(maxs + 1)]
-    for i in arrs:
+    for i in items:
         c[i] = c[i] + 1
     for i in range(1, maxs + 1):
         c[i] = c[i - 1] + c[i]
 
-    res = [0 for i in range(len(arrs))]
-    for i in arrs[::-1]:
+    res = [0 for i in range(len(items))]
+    for i in items[::-1]:
         res[c[i] - 1] = i
         c[i] = c[i] - 1
     return res
 
 
-def radix_sort(arrs):
+def radix_sort(items):
     """
     基数排序
     Least Signficant Digit First(LSD)
     """
-    size = len(str(max(arrs)))
+    size = len(str(max(items)))
     tmp = [[] for i in range(10)]
     n = 1
     for i in range(size):
         res = []
-        for single in arrs:
+        for single in items:
             m = single // n % 10
             tmp[m].append(single)
         for i in range(10):
             for s in tmp[i]:
                 res.append(s)
-        arrs = res
+        items = res
         tmp = [[] for i in range(10)]
         n = 10 * n
     return res
