@@ -109,3 +109,4 @@ celerybeat-schedule.db
 celerybeat.pid
 .ropeproject/
 compose/elasticsearch/plugins/*
+*.pyc
