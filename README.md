@@ -15,3 +15,14 @@ pipenv install
 pipenv shell
 pytest
 ```
+
+##Git
+```
+git fetch origin
+git rebase origin/master
+git checkout -b algo-ch16
+git diff
+git add -A
+git commit -am "modify readme"
+git push
+```
