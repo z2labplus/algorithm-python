@@ -1,4 +1,8 @@
 from algorithm.search.binary_search import binary_search
+from algorithm.search.binary_search import binary_search_first
+from algorithm.search.binary_search import binary_search_last
+from algorithm.search.binary_search import binary_search_first_gte
+from algorithm.search.binary_search import binary_search_last_lte
 
 
 def test_search():
