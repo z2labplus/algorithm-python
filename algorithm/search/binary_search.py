@@ -103,3 +103,29 @@ def binary_search_last_lte(items, val):
             else:
                 low = mid + 1
     return False
+
+
+def homework17(array, value):
+    '''
+    https://time.geekbang.org/column/article/42733
+    课后习题
+    '''
+    low = 0
+    high = len(array) - 1
+    while low <= high:
+        mid = low + ((high - low) >> 1)
+        if value == array[low]:
+            return low
+        if value == array[high]:
+            return high
+        if value == array[mid]:
+            return mid
+        if value > array[mid] and value > array[high] and array[mid] < array[low]:
+            high = mid - 1
+        elif value < array[mid] and value < array[low] and array[mid] < array[low]:
+            high = mid - 1
+        elif value < array[mid] and value > array[low]:
+            high = mid - 1
+        else:
+            low = mid + 1
+    return False
