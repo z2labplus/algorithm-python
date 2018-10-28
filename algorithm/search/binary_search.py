@@ -27,3 +27,79 @@ def binary_search_inner(items, low, high, value):
 
 def sqrt(x):
     pass
+
+
+def binary_search_first(items, val):
+    '''
+    二分查找寻找第一个值等于指定值
+    '''
+    low = 0
+    high = len(items) - 1
+    while low <= high:
+        mid = low + ((high - low) >> 1)
+        if items[mid] > val:
+            high = mid - 1
+        elif items[mid] < val:
+            low = mid + 1
+        else:
+            if mid == 0 or items[mid - 1] != val:
+                return mid
+            else:
+                high = mid - 1
+    return False
+
+
+def binary_search_last(items, val):
+    '''
+    二分查找寻找最后一个值等于指定值
+    '''
+    low = 0
+    high = len(items) - 1
+    while low <= high:
+        mid = low + ((high - low) >> 1)
+        if items[mid] > val:
+            high = mid - 1
+        elif items[mid] < val:
+            low = mid + 1
+        else:
+            if mid == (len(items) - 1) or items[mid + 1] != val:
+                return mid
+            else:
+                low = mid + 1
+    return False
+
+
+def binary_search_first_gte(items, val):
+    '''
+    二分查找寻找第一个值大于等于指定值
+    '''
+    low = 0
+    high = len(items) - 1
+    while low <= high:
+        mid = low + ((high - low) >> 1)
+        if items[mid] >= val:
+            if mid == 0 or items[mid - 1] < val:
+                return mid
+            else:
+                high = mid - 1
+        else:
+            low = mid + 1
+    return False
+
+
+def binary_search_last_lte(items, val):
+    '''
+    二分查找寻找最后一个值小于等于指定值
+    '''
+    low = 0
+    high = len(items) - 1
+    while low <= high:
+        mid = low + ((high - low) >> 1)
+        if items[mid] > val:
+            high = mid - 1
+        else:
+            if mid == (len(items) - 1) or items[mid + 1] > val:
+                return mid
+            else:
+                low = mid + 1
+    return False
