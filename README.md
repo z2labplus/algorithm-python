@@ -8,12 +8,11 @@ __coauthor__ = "Micheal Gardner"
 ## quickstart
 
 ```bash
-pip install pipenv 
-pipenv run pip install pip==18.0
+pip install -U poetry
 cd this-repo-dir/
-pipenv install 
-pipenv shell
-pytest
+poetry install
+poetry shell
+poetry run pytest
 ```
 
 ##Git
