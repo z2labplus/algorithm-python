@@ -1,0 +1,41 @@
+[tool.poetry]
+name = "algorithm-python"
+version = "0.0.1"
+description = "the road to algorithm of python"
+
+license = "MIT"
+
+authors = [
+    "HerryZhang",
+    "Micheal Gardner <twocucao@gmail.com>",
+]
+
+readme = 'README.md'  # Markdown files are supported
+
+repository = "https://github.com/herryzhang/algorithm-python"
+homepage = "https://github.com/herryzhang/algorithm-python"
+
+keywords = ['packaging', 'poetry']
+
+[[tool.poetry.source]]
+name = "douban"
+url = 'https://pypi.douban.com/simple/'
+
+[tool.poetry.dependencies]
+python = "^3.2"  # Compatible python versions must be declared here
+ipython = "*"
+ipdb = "*"
+sphinx = "^1.8"
+sphinx_rtd_theme = "^0.4.2"
+sphinx-autobuild = "^0.7.1"
+
+[tool.poetry.dev-dependencies]
+autoflake = "*"
+coverage = "*"
+"flake8" = "*"
+mypy = "*"
+pytest = "*"
+pytest-cov = "*"
+pytest-html = "*"
+pytest-sugar = "*"
+pytest-rerunfailures = "*"

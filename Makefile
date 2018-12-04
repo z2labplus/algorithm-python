@@ -22,8 +22,8 @@ for line in sys.stdin:
 endef
 export PRINT_HELP_PYSCRIPT
 
-py := pipenv run python
-pytest := pipenv run pytest
+py := poetry run python
+pytest := poetry run pytest
 
 help:
 	@python -c "$$PRINT_HELP_PYSCRIPT" < $(MAKEFILE_LIST)
@@ -82,4 +82,3 @@ clean-test: ## remove test and coverage artifacts
 	rm -fr .tox/
 	rm -f .coverage
 	rm -fr htmlcov/
-
